@@ -1,0 +1,387 @@
+AI Builder Bootcamp for Beginners Updated
+
+A 4-week program feels:
+
+* More achievable for beginners
+* Easier to market
+* Easier to fill
+* Easier to manage live
+* More likely to convert free students into paying students
+
+The “Week 1 Free” model is also excellent because it lowers the barrier to entry and lets students experience quick wins before paying.
+
+Here’s how I would restructure and sharpen the program.
+
+---
+
+# AI Builder Bootcamp
+
+## From Beginner to AI-Powered Builder in 4 Weeks
+
+### Schedule
+
+* Duration: 4 Weeks
+* Live Classes: 3 Days Per Week
+* Total Sessions: 12 Live Sessions
+* Session Length: 2–3 Hours
+* Format: Hands-on project-based learning
+
+---
+
+# Pricing Structure
+
+| Week   | Access          | Price |
+| ------ | --------------- | ----- |
+| Week 1 | Free Trial Week | Free  |
+| Week 2 | Paid            | $300  |
+| Week 3 | Paid            | $300  |
+| Week 4 | Paid            | $300  |
+
+## Total Program Cost
+
+* Free Week + $900 Full Program
+
+This is psychologically effective because:
+
+* Students commit after experiencing value
+* You build trust first
+* Students already have momentum before payment
+
+---
+
+# Refined Program Goal
+
+By the end of the program, students will:
+
+* Build and deploy a real website
+* Use Cursor to generate and edit code
+* Understand Git & GitHub workflow
+* Build a Chrome extension
+* Build a simple AI-powered web app
+* Deploy projects online
+* Develop confidence using AI for software creation
+
+---
+
+# Suggested Weekly Structure
+
+# WEEK 1 — FREE
+
+# AI Foundations + Build Your First Website
+
+## Goal
+
+Get students excited and confident quickly.
+
+## Session 1 — AI Productivity & Cursor
+
+Topics:
+
+* What AI coding is
+* How developers use AI
+* Prompt engineering basics
+* Using ChatGPT effectively
+* Installing Cursor
+* Understanding projects and files
+
+Mini Exercise:
+
+* Generate a personal bio page with AI
+
+---
+
+## Session 2 — Build a Website with AI
+
+Topics:
+
+* HTML basics
+* CSS basics
+* Website structure
+* Editing AI-generated code
+* Improving design using prompts
+
+Project:
+
+* Personal portfolio website
+
+---
+
+## Session 3 — Deploy Your Website
+
+Topics:
+
+* Git basics
+* GitHub introduction
+* Deploying online
+* Sharing projects publicly
+
+Project:
+
+* Publish first live website
+
+---
+
+# END OF FREE WEEK OFFER
+
+At the end of Week 1:
+
+Students already have:
+
+* A live website
+* GitHub account
+* AI coding experience
+* Confidence
+
+This is where conversion happens.
+
+---
+
+# WEEK 2 — Chrome Extensions + Professional Workflow
+
+## ($300)
+
+## Session 1 — Git & GitHub Workflow
+
+Topics:
+
+* Repositories
+* Commits
+* Branches
+* Push/pull
+* Collaboration workflow
+
+---
+
+## Session 2 — Chrome Extension Fundamentals
+
+Topics:
+
+* manifest.json
+* Browser APIs
+* DOM manipulation
+* Injecting scripts
+
+Project:
+
+* Productivity Chrome extension
+
+---
+
+## Session 3 — AI-Powered Chrome Tools
+
+Projects:
+
+* AI text summarizer
+* LinkedIn helper
+* AI email assistant
+
+Outcome:
+Students build tools they actually use daily.
+
+---
+
+# WEEK 3 — Build AI Web Apps
+
+## ($300)
+
+## Session 1 — APIs & AI Integration
+
+Topics:
+
+* APIs explained simply
+* OpenAI API
+* Fetch requests
+* AI responses
+
+Project:
+
+* AI chatbot
+
+---
+
+## Session 2 — Frontend + Backend Basics
+
+Topics:
+
+* Simple backend concepts
+* Forms
+* User interaction
+* Data flow
+
+Project:
+
+* AI note summarizer
+
+---
+
+## Session 3 — Build a Real AI Tool
+
+Projects:
+
+* AI business assistant
+* AI study helper
+* AI content generator
+
+---
+
+# WEEK 4 — Launch & Capstone
+
+## ($300)
+
+## Session 1 — Deployment & Hosting
+
+Topics:
+
+* Domains
+* Hosting
+* Environment variables
+* Deployment workflow
+
+Platforms:
+
+* [Hostinger](https://www.hostinger.com?utm_source=chatgpt.com)
+* [Vercel](https://vercel.com?utm_source=chatgpt.com)
+* [GitHub](https://github.com?utm_source=chatgpt.com)
+
+---
+
+## Session 2 — Capstone Build Session
+
+Students choose:
+
+* AI web app
+* Chrome extension
+* Startup website
+* Productivity tool
+
+You coach live.
+
+---
+
+## Session 3 — Demo Day
+
+Students present:
+
+* Their live app
+* GitHub repository
+* Website
+* Chrome extension
+
+This creates:
+
+* Portfolio credibility
+* Community
+* Testimonials
+* Future referrals
+
+---
+
+# Why This Structure Works Better
+
+## 1. Fast Wins
+
+Students build something immediately.
+
+---
+
+## 2. Low Friction
+
+Free Week reduces hesitation.
+
+---
+
+## 3. Strong Conversion Opportunity
+
+Students are likely to pay after seeing:
+
+> “I actually built a real website.”
+
+---
+
+## 4. High Perceived Value
+
+Even beginners understand the value of:
+
+* Websites
+* AI apps
+* Chrome extensions
+* Deployment
+
+---
+
+# Important Recommendation
+
+Do NOT overload students with:
+
+* Heavy JavaScript theory
+* Computer science concepts
+* Complex backend architecture
+
+Your audience wants:
+
+* Practical outcomes
+* Momentum
+* Confidence
+* Real projects
+
+---
+
+# Suggested Bonus Resources
+
+You can provide:
+
+* Prompt templates
+* Cursor rules/templates
+* Git cheat sheets
+* Deployment checklist
+* Chrome extension starter templates
+
+These increase perceived value dramatically.
+
+---
+
+# Strong Marketing Angle
+
+Instead of saying:
+
+❌ “Learn programming”
+
+Say:
+
+✅ “Learn how to build software with AI.”
+
+That framing is much more attractive to beginners.
+
+---
+
+# Suggested Taglines
+
+### Option 1
+
+> Build websites, Chrome extensions, and AI apps — even if you’ve never coded before.
+
+### Option 2
+
+> Learn to use AI like a modern software builder.
+
+### Option 3
+
+> Turn your ideas into real apps using AI tools.
+
+---
+
+# My Main Recommendation
+
+Your biggest competitive advantage is:
+
+> Teaching practical AI-powered building for non-technical people.
+
+That is a massive market right now.
+
+Most courses either:
+
+* Teach too much theory
+  OR
+* Assume technical background
+
+Your program sits in the perfect middle.
