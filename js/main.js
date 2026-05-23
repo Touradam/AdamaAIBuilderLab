@@ -206,6 +206,29 @@ function renderAboutSections() {
   }
 }
 
+function initIntakeForm() {
+  if (typeof INTAKE_FORM_URL === 'undefined') return;
+
+  document.querySelectorAll('#intake-form-link, #intake-form-link-secondary').forEach((link) => {
+    link.href = INTAKE_FORM_URL;
+  });
+
+  const titleEl = document.getElementById('intake-form-title');
+  if (titleEl && typeof INTAKE_FORM_TITLE !== 'undefined') {
+    titleEl.textContent = INTAKE_FORM_TITLE;
+  }
+
+  const subtitleEl = document.getElementById('intake-form-subtitle');
+  if (subtitleEl && typeof INTAKE_FORM_SUBTITLE !== 'undefined') {
+    subtitleEl.textContent = INTAKE_FORM_SUBTITLE;
+  }
+
+  const primaryLink = document.getElementById('intake-form-link');
+  if (primaryLink && typeof INTAKE_FORM_TITLE !== 'undefined') {
+    primaryLink.textContent = INTAKE_FORM_TITLE;
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   renderHeader();
   renderFooter();
@@ -216,4 +239,5 @@ document.addEventListener('DOMContentLoaded', () => {
   renderHomeAudience();
   renderHomePhilosophy();
   renderAboutSections();
+  initIntakeForm();
 });

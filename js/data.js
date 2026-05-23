@@ -1,6 +1,22 @@
 const INTAKE_FORM_URL =
   'https://touradam.notion.site/3682b0c9b12980368964cb112ed1af0c?pvs=105';
 
+// Notion blocks standard page URLs in iframes on external sites.
+// To embed in-page, use Share → Publish → Embed this page in Notion and set INTAKE_FORM_EMBED_URL.
+const INTAKE_FORM_EMBED_URL = '';
+
+// Keep in sync with the Notion form page title, subtitle, and confirmation message.
+// Notion update steps:
+// 1. Open the form page in your Notion workspace (not the public link).
+// 2. Set the page title to INTAKE_FORM_TITLE.
+// 3. Add a text block below the title with INTAKE_FORM_SUBTITLE.
+// 4. Form settings → Confirmation message → paste INTAKE_FORM_CONFIRMATION.
+const INTAKE_FORM_TITLE = 'Apply to AI Builder Bootcamp';
+const INTAKE_FORM_SUBTITLE =
+  "Takes about 2 minutes. Week 1 is free — we'll email you cohort details and next steps.";
+const INTAKE_FORM_CONFIRMATION =
+  "Thanks — we got your application!\n\nWe'll review your responses and email you within 24 hours with cohort details, schedule, and how to join Week 1 free.\n\nQuestions before then? Email touradam3@gmail.com.";
+
 const programData = [
   {
     id: 'week1',

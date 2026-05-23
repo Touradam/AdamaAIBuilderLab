@@ -1,0 +1,17 @@
+Paste this copy into your Notion intake form (edit in Notion workspace, not the public link).
+
+PAGE TITLE
+----------
+Apply to AI Builder Bootcamp
+
+SUBTITLE (text block under title)
+---------------------------------
+Takes about 2 minutes. Week 1 is free — we'll email you cohort details and next steps.
+
+CONFIRMATION MESSAGE (Form settings → Confirmation message)
+-----------------------------------------------------------
+Thanks — we got your application!
+
+We'll review your responses and email you within 24 hours with cohort details, schedule, and how to join Week 1 free.
+
+Questions before then? Email touradam3@gmail.com.

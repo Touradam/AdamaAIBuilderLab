@@ -1350,18 +1350,29 @@ h2.section-title {
   scroll-margin-top: 5rem;
 }
 
-.intake-form-frame {
+.intake-form-panel {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  overflow: hidden;
+  padding: 2rem;
+  text-align: center;
 }
 
-.intake-form-frame iframe {
-  display: block;
-  width: 100%;
-  min-height: 600px;
-  border: 0;
+.intake-form-panel-intro {
+  color: var(--text-muted);
+  margin: 0 0 1.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+
+.intake-form-fields {
+  max-width: 20rem;
+  margin: 0 auto 1.75rem;
+  text-align: left;
+}
+
+.intake-form-actions {
+  justify-content: center;
 }
 
 .intake-form-fallback {
@@ -1377,12 +1388,6 @@ h2.section-title {
 
 .intake-form-fallback a:hover {
   color: var(--gold-light);
-}
-
-@media (min-width: 768px) {
-  .intake-form-frame iframe {
-    min-height: 700px;
-  }
 }
 
 /* Animations */
