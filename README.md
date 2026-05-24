@@ -1,6 +1,6 @@
-# AI Mastery Program Website
+# AI Education Program Website
 
-A static multi-page website for advertising a 2-weekend AI education program. Built with HTML, CSS, and JavaScript.
+A static multi-page website for advertising a 4-week live AI education program. Built with HTML, CSS, and JavaScript.
 
 ## Overview
 

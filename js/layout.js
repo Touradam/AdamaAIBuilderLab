@@ -14,6 +14,7 @@ function getCurrentPage() {
 
 function renderHeader() {
   const current = getCurrentPage();
+  const siteName = typeof SITE_NAME !== 'undefined' ? SITE_NAME : 'AI Education Program';
   const navLinks = NAV_ITEMS.map(
     (item) =>
       `<a href="${item.href}" class="${item.href === current ? 'active' : ''}">${item.name}</a>`
@@ -24,7 +25,7 @@ function renderHeader() {
   header.innerHTML = `
     <nav class="container" aria-label="Main navigation">
       <div class="nav-row">
-        <a href="index.html" class="logo">AI Builder Bootcamp</a>
+        <a href="index.html" class="logo">${siteName}</a>
         <div class="nav-desktop">${navLinks}</div>
         <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav">
           <span class="sr-only">Open menu</span>
@@ -44,14 +45,15 @@ function renderHeader() {
 
 function renderFooter() {
   const year = new Date().getFullYear();
+  const siteName = typeof SITE_NAME !== 'undefined' ? SITE_NAME : 'AI Education Program';
   const footer = document.createElement('footer');
   footer.className = 'site-footer';
   footer.innerHTML = `
     <div class="container">
       <div class="footer-grid">
         <div>
-          <h3>AI Builder Bootcamp</h3>
-          <p>Build, deploy, and manage real websites, Chrome extensions, and AI-powered web apps — even without prior coding experience.</p>
+          <h3>${siteName}</h3>
+          <p>Understand AI, think critically, and build real tools that improve your life — without becoming dependent on technology.</p>
         </div>
         <div>
           <h3>Quick Links</h3>
@@ -69,7 +71,7 @@ function renderFooter() {
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; ${year} AI Builder Bootcamp. All rights reserved.</p>
+        <p>&copy; ${year} ${siteName}. All rights reserved.</p>
       </div>
     </div>
   `;

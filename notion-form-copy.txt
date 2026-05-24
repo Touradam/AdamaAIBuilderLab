@@ -2,7 +2,7 @@ Paste this copy into your Notion intake form (edit in Notion workspace, not the 
 
 PAGE TITLE
 ----------
-Apply to AI Builder Bootcamp
+Apply to AI Education Program
 
 SUBTITLE (text block under title)
 ---------------------------------
