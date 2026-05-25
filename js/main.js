@@ -32,6 +32,32 @@ function getSessionNumber(weekIndex, dayIndex) {
   return session;
 }
 
+function getSessionTimeForDay(dayOfWeek) {
+  if (typeof cohortSchedule === 'undefined') return '';
+  if (dayOfWeek === 'friday') return cohortSchedule.fridayTime;
+  if (dayOfWeek === 'saturday') return cohortSchedule.saturdayTime;
+  if (dayOfWeek === 'sunday') return cohortSchedule.sundayTime;
+  return '';
+}
+
+function getSessionScheduleText(weekIndex, dayIndex, day) {
+  if (day.schedule) return day.schedule;
+
+  const dayOfWeek = day.dayOfWeek || ['friday', 'saturday', 'sunday'][dayIndex];
+  const dayLabel = dayOfWeek.charAt(0).toUpperCase() + dayOfWeek.slice(1);
+  const time = getSessionTimeForDay(dayOfWeek);
+
+  if (weekIndex === 0 && dayIndex === 0 && cohortSchedule.firstSessionDay) {
+    return `${cohortSchedule.firstSessionDay} · ${time}`;
+  }
+
+  return `${dayLabel} · ${time}`;
+}
+
+function getSessionDuration(day) {
+  return day.duration || '2 hours';
+}
+
 function renderScheduleTimeline() {
   const container = document.getElementById('schedule-timeline');
   if (!container || typeof programData === 'undefined') return;
@@ -55,8 +81,8 @@ function renderScheduleTimeline() {
                 <h4>${day.title}</h4>
                 <p>${day.subtitle}</p>
                 <div class="timeline-meta">
-                  ${day.schedule ? `<span>${day.schedule}</span>` : ''}
-                  <span>${day.duration || '2–3 Hours'}</span>
+                  <span>${getSessionScheduleText(weekIndex, dayIndex, day)}</span>
+                  <span>${getSessionDuration(day)}</span>
                   <span>Online</span>
                 </div>
               </div>
@@ -160,6 +186,12 @@ function renderCohortStart() {
   document.querySelectorAll('[data-cohort-label]').forEach((el) => {
     el.textContent = firstSessionLabel;
   });
+
+  if (cohortSchedule.weeklyScheduleSummary) {
+    document.querySelectorAll('[data-weekly-schedule]').forEach((el) => {
+      el.textContent = cohortSchedule.weeklyScheduleSummary;
+    });
+  }
 }
 
 function initIntakeForm() {

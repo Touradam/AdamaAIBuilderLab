@@ -48,9 +48,13 @@ const INTAKE_FORM_CONFIRMATION =
 const cohortSchedule = {
   firstSessionDate: '2026-06-05',
   firstSessionDay: 'Friday, June 5, 2026',
-  firstSessionTime: '8:00–9:00 AM PST',
+  firstSessionTime: '7:00–8:00 PM PST',
   firstSessionLabel: 'Session 1 · AI Productivity & Cursor',
   timezone: 'Pacific Time (PST)',
+  fridayTime: '7:00–8:00 PM PST',
+  saturdayTime: '8:00–10:00 AM PST',
+  sundayTime: '8:00–10:00 AM PST',
+  weeklyScheduleSummary: 'Friday 7–8 PM · Saturday & Sunday 8–10 AM PST',
 };
 
 const programData = [
@@ -63,8 +67,9 @@ const programData = [
         id: 'w1s1',
         title: 'Session 1: AI Productivity & Cursor',
         subtitle: 'Mini exercise: Generate a personal bio page with AI',
-        schedule: 'Friday, June 5, 2026 · 8:00–9:00 AM PST',
+        schedule: 'Friday, June 5, 2026 · 7:00–8:00 PM PST',
         duration: '1 hour',
+        dayOfWeek: 'friday',
         topics: [
           'What AI coding is',
           'How developers use AI',
@@ -78,6 +83,8 @@ const programData = [
         id: 'w1s2',
         title: 'Session 2: Build a Website with AI',
         subtitle: 'Project: Personal portfolio website',
+        dayOfWeek: 'saturday',
+        duration: '2 hours',
         topics: [
           'HTML basics',
           'CSS basics',
@@ -90,6 +97,8 @@ const programData = [
         id: 'w1s3',
         title: 'Session 3: Deploy Your Website',
         subtitle: 'Project: Publish your first live website',
+        dayOfWeek: 'sunday',
+        duration: '2 hours',
         topics: [
           'Git basics',
           'GitHub introduction',
@@ -108,6 +117,8 @@ const programData = [
         id: 'w2s1',
         title: 'Session 1: Git & GitHub Workflow',
         subtitle: 'Professional version control workflow',
+        dayOfWeek: 'friday',
+        duration: '1 hour',
         topics: [
           'Repositories',
           'Commits',
@@ -120,6 +131,8 @@ const programData = [
         id: 'w2s2',
         title: 'Session 2: Chrome Extension Fundamentals',
         subtitle: 'Project: Productivity Chrome extension',
+        dayOfWeek: 'saturday',
+        duration: '2 hours',
         topics: [
           'manifest.json',
           'Browser APIs',
@@ -131,6 +144,8 @@ const programData = [
         id: 'w2s3',
         title: 'Session 3: AI-Powered Chrome Tools',
         subtitle: 'Projects: AI summarizer, LinkedIn helper, or email assistant',
+        dayOfWeek: 'sunday',
+        duration: '2 hours',
         topics: [
           'AI text summarizer extension',
           'LinkedIn helper extension',
@@ -149,6 +164,8 @@ const programData = [
         id: 'w3s1',
         title: 'Session 1: APIs & AI Integration',
         subtitle: 'Project: AI chatbot',
+        dayOfWeek: 'friday',
+        duration: '1 hour',
         topics: [
           'APIs explained simply',
           'OpenAI API',
@@ -160,6 +177,8 @@ const programData = [
         id: 'w3s2',
         title: 'Session 2: Frontend + Backend Basics',
         subtitle: 'Project: AI note summarizer',
+        dayOfWeek: 'saturday',
+        duration: '2 hours',
         topics: [
           'Simple backend concepts',
           'Forms',
@@ -171,6 +190,8 @@ const programData = [
         id: 'w3s3',
         title: 'Session 3: Build a Real AI Tool',
         subtitle: 'Choose: business assistant, study helper, or content generator',
+        dayOfWeek: 'sunday',
+        duration: '2 hours',
         topics: [
           'AI business assistant',
           'AI study helper',
@@ -189,6 +210,8 @@ const programData = [
         id: 'w4s1',
         title: 'Session 1: Deployment & Hosting',
         subtitle: 'Go live with Hostinger, Vercel, or GitHub Pages',
+        dayOfWeek: 'friday',
+        duration: '1 hour',
         topics: [
           'Domains',
           'Hosting',
@@ -201,6 +224,8 @@ const programData = [
         id: 'w4s2',
         title: 'Session 2: Capstone Build Session',
         subtitle: 'Live coaching on your chosen final project',
+        dayOfWeek: 'saturday',
+        duration: '2 hours',
         topics: [
           'Choose: AI web app, Chrome extension, startup website, or productivity tool',
           'Build and polish with live instructor support',
@@ -211,6 +236,8 @@ const programData = [
         id: 'w4s3',
         title: 'Session 3: Demo Day',
         subtitle: 'Present your live app, repo, website, and extension',
+        dayOfWeek: 'sunday',
+        duration: '2 hours',
         topics: [
           'Present your capstone project to the cohort',
           'Share your GitHub repository and live deployment',
@@ -282,12 +309,12 @@ const faqs = [
   {
     question: 'What is the schedule?',
     answer:
-      'The next cohort starts Friday, June 5, 2026 at 8:00 AM PST with Session 1. The program runs 4 weeks with 3 live sessions per week (12 sessions total). Session times are shared after you apply.',
+      'The next cohort starts Friday, June 5, 2026 at 7:00 PM PST with Session 1. Live sessions run Friday 7–8 PM and Saturday & Sunday 8–10 AM (Pacific Time). The program runs 4 weeks with 3 live sessions per week (12 sessions total).',
   },
   {
     question: 'When does the next cohort start?',
     answer:
-      'The first live session is Friday, June 5, 2026 from 8:00–9:00 AM Pacific Time (PST). Apply now to reserve your spot in Week 1 — it is completely free.',
+      'The first live session is Friday, June 5, 2026 from 7:00–8:00 PM Pacific Time (PST). Ongoing sessions are Friday 7–8 PM and Saturday & Sunday 8–10 AM PST. Apply now to reserve your spot in Week 1 — it is completely free.',
   },
   {
     question: 'What if I miss a session?',
