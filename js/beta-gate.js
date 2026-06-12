@@ -4,9 +4,9 @@ function getExpectedGateValues() {
   const d1 = typeof betaGateDigits1 !== 'undefined' ? betaGateDigits1 : [];
   const d2 = typeof betaGateDigits2 !== 'undefined' ? betaGateDigits2 : [];
   const pairs = typeof betaGatePairs !== 'undefined' ? betaGatePairs : [];
-  const i = 1;
-  const j = 4;
-  const k = 2;
+  const i = 0;
+  const j = 1;
+  const k = 0;
   return {
     digit1: d1[i],
     digit2: d2[j],
