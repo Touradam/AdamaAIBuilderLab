@@ -1,32 +1,25 @@
-# AI Education Program Website
+# AI Mastery Program — Friends Beta Website
 
-A static multi-page website for advertising a 4-week live AI education program. Built with HTML, CSS, and JavaScript.
-
-## Overview
-
-This website showcases a comprehensive AI education program designed to teach people how to understand AI, think critically about it, and build real tools that improve their lives without becoming dependent on AI.
+A static 2-page website for the free friends-only beta cohort of the AI Mastery Program. Built with HTML, CSS, and vanilla JavaScript — no build step.
 
 ## Pages
 
-- **index.html** — Home: hero, program overview, and value proposition
-- **about.html** — Philosophy, mission, and target audience
-- **schedule.html** — Program format, detailed timeline, and preparation details
-- **contact.html** — Contact information and FAQ
+- **index.html** — Home: warm beta messaging, what you'll learn, hands-on callout, gated signup flow (Notion form)
+- **success.html** — Get Ready: requirements, expectations, and 1-month outcomes
 
 ## Project Structure
 
 ```
-adama_AI_course/
 ├── index.html
-├── about.html
-├── schedule.html
-├── contact.html
+├── success.html
 ├── css/
 │   └── styles.css
 ├── js/
-│   ├── data.js      # Program content
-│   ├── layout.js    # Header and footer
-│   └── main.js      # Page interactions and dynamic sections
+│   ├── data.js       # Site constants, cohort schedule, learn topics, gate allowed values
+│   ├── layout.js     # Header and footer
+│   ├── beta-gate.js  # Signup gate validation and modal
+│   └── main.js       # Mobile nav, dynamic sections, form links
+├── assets/
 ├── robots.txt
 ├── sitemap.xml
 └── README.md
@@ -34,45 +27,39 @@ adama_AI_course/
 
 ## Getting Started
 
-No build step required. Open `index.html` in a browser, or serve the folder locally:
+Open `index.html` in a browser — no server required.
+
+Optional local server:
 
 ```bash
-# Python
 python -m http.server 8000
-
-# Node (npx)
-npx serve .
 ```
-
-Then open http://localhost:8000
 
 ## Customization
 
-### Content
+### Notion signup form
 
-Edit `js/data.js` to update:
+In `js/data.js`, set:
 
-- Program curriculum (weeks and days)
-- Target audience descriptions
-- Core philosophy statements
-- FAQ entries
+```js
+const NOTION_FORM_URL = 'https://your-notion-form-url';
+```
+
+### Gate allowed values
+
+Gate input constraints live in `js/data.js` (`betaGateDigits1`, `betaGateDigits2`, `betaGatePairs`). Validation logic is in `js/beta-gate.js`.
+
+### Cohort schedule
+
+Edit `cohortSchedule` in `js/data.js`. Home page elements with `data-cohort-start` update automatically.
 
 ### Styling
 
-Colors and layout are defined in `css/styles.css` (CSS variables at the top of the file).
-
-### Contact & SEO
-
-Update placeholders in the HTML pages and in:
-
-- `js/layout.js` (footer email)
-- `contact.html`
-- `about.html` (instructor bio)
-- `robots.txt` and `sitemap.xml` (base URL)
+Colors and layout use CSS variables at the top of `css/styles.css` (Midnight Champagne theme).
 
 ## Deployment
 
-Upload all files to any static host (Netlify, GitHub Pages, S3, etc.). No build command needed.
+Upload all files to any static host (Netlify, GitHub Pages, S3, etc.). GitHub Pages workflow is included in `.github/workflows/static.yml`.
 
 ## License
 

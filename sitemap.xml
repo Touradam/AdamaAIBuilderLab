@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://aimastery.example/</loc></url>
-  <url><loc>https://aimastery.example/about.html</loc></url>
-  <url><loc>https://aimastery.example/schedule.html</loc></url>
-  <url><loc>https://aimastery.example/contact.html</loc></url>
+  <url><loc>https://touradam.github.io/AdamaAIBuilderLab/</loc></url>
+  <url><loc>https://touradam.github.io/AdamaAIBuilderLab/success.html</loc></url>
 </urlset>

@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">AI Education Program course roadmap</title>
+  <desc id="desc">A four week gold and dark course roadmap for the AI Education Program, moving from AI foundations to Chrome extensions, AI web apps, and Demo Day.</desc>
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c0c0f"/>
+      <stop offset="0.45" stop-color="#12121a"/>
+      <stop offset="1" stop-color="#070708"/>
+    </linearGradient>
+    <radialGradient id="goldGlow" cx="50%" cy="35%" r="65%">
+      <stop offset="0" stop-color="#c4a35a" stop-opacity="0.34"/>
+      <stop offset="0.42" stop-color="#c4a35a" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#c4a35a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldStroke" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9a7b3c"/>
+      <stop offset="0.48" stop-color="#e2c887"/>
+      <stop offset="1" stop-color="#c4a35a"/>
+    </linearGradient>
+    <linearGradient id="cardGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f1f28"/>
+      <stop offset="1" stop-color="#12121a"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="20" stdDeviation="22" flood-color="#000000" flood-opacity="0.42"/>
+    </filter>
+    <filter id="goldBloom" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="dotGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#c4a35a" opacity="0.18"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bgGradient)"/>
+  <rect width="1600" height="900" fill="url(#goldGlow)"/>
+  <rect width="1600" height="900" fill="url(#dotGrid)" opacity="0.38"/>
+
+  <g opacity="0.28" stroke="#c4a35a" stroke-width="1.2" fill="none">
+    <path d="M-20 220 C180 155 330 165 500 230 S850 330 1040 235 1340 100 1620 170"/>
+    <path d="M-20 760 C250 700 420 730 610 790 S970 880 1205 760 1450 620 1620 670"/>
+    <path d="M1230 65 L1305 65 L1305 120 L1378 120"/>
+    <path d="M116 705 L205 705 L205 650 L278 650"/>
+    <circle cx="1378" cy="120" r="4" fill="#c4a35a"/>
+    <circle cx="278" cy="650" r="4" fill="#c4a35a"/>
+  </g>
+
+  <g font-family="Outfit, DM Sans, Segoe UI, Arial, sans-serif">
+    <text x="110" y="95" fill="#c4a35a" font-size="22" font-weight="700" letter-spacing="4">AI EDUCATION PROGRAM</text>
+    <text x="110" y="158" fill="#eceae4" font-size="58" font-weight="700" letter-spacing="-1.5">Course Roadmap</text>
+    <text x="110" y="203" fill="#b8b5ae" font-size="25">Build tools that optimize your life - from first website to capstone demo.</text>
+
+    <g transform="translate(1180 76)">
+      <rect x="0" y="0" width="300" height="96" rx="24" fill="#18181f" stroke="#c4a35a" stroke-opacity="0.32"/>
+      <text x="28" y="38" fill="#e2c887" font-size="25" font-weight="700">4 Weeks</text>
+      <text x="28" y="72" fill="#eceae4" font-size="21">12 live sessions</text>
+      <line x1="162" y1="22" x2="162" y2="74" stroke="#c4a35a" stroke-opacity="0.28"/>
+      <text x="188" y="38" fill="#e2c887" font-size="25" font-weight="700">Week 1</text>
+      <text x="188" y="72" fill="#eceae4" font-size="21">Free trial</text>
+    </g>
+  </g>
+
+  <path d="M195 460 C345 338 470 338 610 458 S875 592 1010 462 1270 330 1408 458" fill="none" stroke="#4b3d22" stroke-width="22" stroke-linecap="round" opacity="0.52"/>
+  <path d="M195 460 C345 338 470 338 610 458 S875 592 1010 462 1270 330 1408 458" fill="none" stroke="url(#goldStroke)" stroke-width="8" stroke-linecap="round" filter="url(#goldBloom)"/>
+
+  <g font-family="DM Sans, Segoe UI, Arial, sans-serif" filter="url(#softShadow)">
+    <g transform="translate(95 295)">
+      <rect width="320" height="310" rx="28" fill="url(#cardGradient)" stroke="#c4a35a" stroke-opacity="0.34"/>
+      <circle cx="72" cy="68" r="42" fill="#c4a35a"/>
+      <text x="72" y="80" text-anchor="middle" fill="#0c0c0f" font-size="34" font-weight="800">1</text>
+      <text x="132" y="54" fill="#e2c887" font-size="18" font-weight="800" letter-spacing="2">FREE WEEK</text>
+      <text x="132" y="89" fill="#eceae4" font-size="28" font-weight="800">Foundations</text>
+      <text x="36" y="146" fill="#d8d5ce" font-size="20" font-weight="700">AI, tools and first website</text>
+      <text x="36" y="188" fill="#9c9a94" font-size="18">S1: AI + setup</text>
+      <text x="36" y="221" fill="#9c9a94" font-size="18">S2: Build portfolio</text>
+      <text x="36" y="254" fill="#9c9a94" font-size="18">S3: Deploy live site</text>
+      <rect x="36" y="274" width="188" height="28" rx="14" fill="#c4a35a" fill-opacity="0.14" stroke="#c4a35a" stroke-opacity="0.28"/>
+      <text x="130" y="294" text-anchor="middle" fill="#e2c887" font-size="14" font-weight="700">Outcome: live portfolio</text>
+    </g>
+
+    <g transform="translate(458 442)">
+      <rect width="320" height="310" rx="28" fill="url(#cardGradient)" stroke="#c4a35a" stroke-opacity="0.34"/>
+      <circle cx="72" cy="68" r="42" fill="#c4a35a"/>
+      <text x="72" y="80" text-anchor="middle" fill="#0c0c0f" font-size="34" font-weight="800">2</text>
+      <text x="132" y="54" fill="#e2c887" font-size="18" font-weight="800" letter-spacing="2">$300</text>
+      <text x="132" y="89" fill="#eceae4" font-size="28" font-weight="800">Extensions</text>
+      <text x="36" y="146" fill="#d8d5ce" font-size="20" font-weight="700">Chrome tools and workflow</text>
+      <text x="36" y="188" fill="#9c9a94" font-size="18">S4: GitHub workflow</text>
+      <text x="36" y="221" fill="#9c9a94" font-size="18">S5: Extension basics</text>
+      <text x="36" y="254" fill="#9c9a94" font-size="18">S6: AI-powered helpers</text>
+      <rect x="36" y="274" width="202" height="28" rx="14" fill="#c4a35a" fill-opacity="0.14" stroke="#c4a35a" stroke-opacity="0.28"/>
+      <text x="137" y="294" text-anchor="middle" fill="#e2c887" font-size="14" font-weight="700">Outcome: useful extension</text>
+    </g>
+
+    <g transform="translate(822 295)">
+      <rect width="320" height="310" rx="28" fill="url(#cardGradient)" stroke="#c4a35a" stroke-opacity="0.34"/>
+      <circle cx="72" cy="68" r="42" fill="#c4a35a"/>
+      <text x="72" y="80" text-anchor="middle" fill="#0c0c0f" font-size="34" font-weight="800">3</text>
+      <text x="132" y="54" fill="#e2c887" font-size="18" font-weight="800" letter-spacing="2">$300</text>
+      <text x="132" y="89" fill="#eceae4" font-size="28" font-weight="800">AI Web Apps</text>
+      <text x="36" y="146" fill="#d8d5ce" font-size="20" font-weight="700">APIs to working AI tools</text>
+      <text x="36" y="188" fill="#9c9a94" font-size="18">S7: OpenAI API</text>
+      <text x="36" y="221" fill="#9c9a94" font-size="18">S8: Frontend + backend</text>
+      <text x="36" y="254" fill="#9c9a94" font-size="18">S9: Build a real AI tool</text>
+      <rect x="36" y="274" width="180" height="28" rx="14" fill="#c4a35a" fill-opacity="0.14" stroke="#c4a35a" stroke-opacity="0.28"/>
+      <text x="126" y="294" text-anchor="middle" fill="#e2c887" font-size="14" font-weight="700">Outcome: AI web app</text>
+    </g>
+
+    <g transform="translate(1185 442)">
+      <rect width="320" height="310" rx="28" fill="url(#cardGradient)" stroke="#c4a35a" stroke-opacity="0.34"/>
+      <circle cx="72" cy="68" r="42" fill="#c4a35a"/>
+      <text x="72" y="80" text-anchor="middle" fill="#0c0c0f" font-size="34" font-weight="800">4</text>
+      <text x="132" y="54" fill="#e2c887" font-size="18" font-weight="800" letter-spacing="2">$300</text>
+      <text x="132" y="89" fill="#eceae4" font-size="28" font-weight="800">Launch</text>
+      <text x="36" y="146" fill="#d8d5ce" font-size="20" font-weight="700">Deploy, polish and present</text>
+      <text x="36" y="188" fill="#9c9a94" font-size="18">S10: Hosting + deploy</text>
+      <text x="36" y="221" fill="#9c9a94" font-size="18">S11: Capstone coaching</text>
+      <text x="36" y="254" fill="#9c9a94" font-size="18">S12: Demo Day</text>
+      <rect x="36" y="274" width="180" height="28" rx="14" fill="#c4a35a" fill-opacity="0.14" stroke="#c4a35a" stroke-opacity="0.28"/>
+      <text x="126" y="294" text-anchor="middle" fill="#e2c887" font-size="14" font-weight="700">Outcome: capstone demo</text>
+    </g>
+  </g>
+
+  <g font-family="DM Sans, Segoe UI, Arial, sans-serif">
+    <circle cx="195" cy="460" r="16" fill="#e2c887" stroke="#0c0c0f" stroke-width="5"/>
+    <circle cx="610" cy="458" r="16" fill="#e2c887" stroke="#0c0c0f" stroke-width="5"/>
+    <circle cx="1010" cy="462" r="16" fill="#e2c887" stroke="#0c0c0f" stroke-width="5"/>
+    <circle cx="1408" cy="458" r="16" fill="#e2c887" stroke="#0c0c0f" stroke-width="5"/>
+
+    <g transform="translate(110 792)">
+      <rect width="1380" height="56" rx="28" fill="#18181f" stroke="#c4a35a" stroke-opacity="0.22"/>
+      <text x="42" y="36" fill="#eceae4" font-size="20" font-weight="700">Schedule:</text>
+      <text x="145" y="36" fill="#b8b5ae" font-size="20">Friday 7-8 PM, Saturday and Sunday 8-10 AM PST</text>
+      <text x="688" y="36" fill="#c4a35a" font-size="20" font-weight="700">Tools:</text>
+      <text x="758" y="36" fill="#b8b5ae" font-size="20">Cursor, GitHub, Chrome Extensions, OpenAI APIs, Vercel, GitHub Pages</text>
+    </g>
+  </g>
+</svg>

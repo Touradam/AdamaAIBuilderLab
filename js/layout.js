@@ -1,8 +1,6 @@
 const NAV_ITEMS = [
   { name: 'Home', href: 'index.html' },
-  { name: 'About', href: 'about.html' },
-  { name: 'Schedule', href: 'schedule.html' },
-  { name: 'Contact', href: 'contact.html' },
+  { name: 'Get Ready', href: 'success.html' },
 ];
 
 function getCurrentPage() {
