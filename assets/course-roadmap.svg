@@ -59,8 +59,8 @@
       <text x="28" y="38" fill="#e2c887" font-size="25" font-weight="700">4 Weeks</text>
       <text x="28" y="72" fill="#eceae4" font-size="21">12 live sessions</text>
       <line x1="162" y1="22" x2="162" y2="74" stroke="#c4a35a" stroke-opacity="0.28"/>
-      <text x="188" y="38" fill="#e2c887" font-size="25" font-weight="700">Week 1</text>
-      <text x="188" y="72" fill="#eceae4" font-size="21">Free trial</text>
+      <text x="188" y="38" fill="#e2c887" font-size="25" font-weight="700">Friends</text>
+      <text x="188" y="72" fill="#eceae4" font-size="21">Beta gift</text>
     </g>
   </g>
 
@@ -72,7 +72,7 @@
       <rect width="320" height="310" rx="28" fill="url(#cardGradient)" stroke="#c4a35a" stroke-opacity="0.34"/>
       <circle cx="72" cy="68" r="42" fill="#c4a35a"/>
       <text x="72" y="80" text-anchor="middle" fill="#0c0c0f" font-size="34" font-weight="800">1</text>
-      <text x="132" y="54" fill="#e2c887" font-size="18" font-weight="800" letter-spacing="2">FREE WEEK</text>
+      <text x="132" y="54" fill="#e2c887" font-size="18" font-weight="800" letter-spacing="2">FREE GIFT</text>
       <text x="132" y="89" fill="#eceae4" font-size="28" font-weight="800">Foundations</text>
       <text x="36" y="146" fill="#d8d5ce" font-size="20" font-weight="700">AI, tools and first website</text>
       <text x="36" y="188" fill="#9c9a94" font-size="18">S1: AI + setup</text>
@@ -86,7 +86,7 @@
       <rect width="320" height="310" rx="28" fill="url(#cardGradient)" stroke="#c4a35a" stroke-opacity="0.34"/>
       <circle cx="72" cy="68" r="42" fill="#c4a35a"/>
       <text x="72" y="80" text-anchor="middle" fill="#0c0c0f" font-size="34" font-weight="800">2</text>
-      <text x="132" y="54" fill="#e2c887" font-size="18" font-weight="800" letter-spacing="2">$300</text>
+      <text x="132" y="54" fill="#e2c887" font-size="18" font-weight="800" letter-spacing="2">WEEK 2</text>
       <text x="132" y="89" fill="#eceae4" font-size="28" font-weight="800">Extensions</text>
       <text x="36" y="146" fill="#d8d5ce" font-size="20" font-weight="700">Chrome tools and workflow</text>
       <text x="36" y="188" fill="#9c9a94" font-size="18">S4: GitHub workflow</text>
@@ -100,7 +100,7 @@
       <rect width="320" height="310" rx="28" fill="url(#cardGradient)" stroke="#c4a35a" stroke-opacity="0.34"/>
       <circle cx="72" cy="68" r="42" fill="#c4a35a"/>
       <text x="72" y="80" text-anchor="middle" fill="#0c0c0f" font-size="34" font-weight="800">3</text>
-      <text x="132" y="54" fill="#e2c887" font-size="18" font-weight="800" letter-spacing="2">$300</text>
+      <text x="132" y="54" fill="#e2c887" font-size="18" font-weight="800" letter-spacing="2">WEEK 3</text>
       <text x="132" y="89" fill="#eceae4" font-size="28" font-weight="800">AI Web Apps</text>
       <text x="36" y="146" fill="#d8d5ce" font-size="20" font-weight="700">APIs to working AI tools</text>
       <text x="36" y="188" fill="#9c9a94" font-size="18">S7: OpenAI API</text>
@@ -114,7 +114,7 @@
       <rect width="320" height="310" rx="28" fill="url(#cardGradient)" stroke="#c4a35a" stroke-opacity="0.34"/>
       <circle cx="72" cy="68" r="42" fill="#c4a35a"/>
       <text x="72" y="80" text-anchor="middle" fill="#0c0c0f" font-size="34" font-weight="800">4</text>
-      <text x="132" y="54" fill="#e2c887" font-size="18" font-weight="800" letter-spacing="2">$300</text>
+      <text x="132" y="54" fill="#e2c887" font-size="18" font-weight="800" letter-spacing="2">WEEK 4</text>
       <text x="132" y="89" fill="#eceae4" font-size="28" font-weight="800">Launch</text>
       <text x="36" y="146" fill="#d8d5ce" font-size="20" font-weight="700">Deploy, polish and present</text>
       <text x="36" y="188" fill="#9c9a94" font-size="18">S10: Hosting + deploy</text>

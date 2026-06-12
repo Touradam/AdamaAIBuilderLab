@@ -20,24 +20,28 @@ function isValidGateCombination(d1, d2, pairStr) {
   return d1 === expected.digit1 && d2 === expected.digit2 && pairNum === expected.pair;
 }
 
-function showSignupPanel(gateEl, signupPanel) {
-  if (gateEl) gateEl.hidden = true;
-  if (signupPanel) {
-    signupPanel.hidden = false;
-    signupPanel.classList.add('beta-signup-reveal');
-  }
-}
-
-function showSuccessModal(modal) {
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
   if (!modal) return;
   modal.hidden = false;
   document.body.classList.add('beta-modal-open');
 }
 
-function hideSuccessModal(modal) {
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
   if (!modal) return;
   modal.hidden = true;
-  document.body.classList.remove('beta-modal-open');
+  if (!document.querySelector('.beta-modal-root:not([hidden])')) {
+    document.body.classList.remove('beta-modal-open');
+  }
+}
+
+function showSignupPanel(signupPanel) {
+  if (signupPanel) {
+    signupPanel.hidden = false;
+    signupPanel.classList.add('beta-signup-reveal');
+    signupPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
 }
 
 function shakeGateInputs(inputs) {
@@ -47,29 +51,59 @@ function shakeGateInputs(inputs) {
   });
 }
 
+function spawnConfetti() {
+  const container = document.getElementById('confetti-container');
+  if (!container) return;
+  container.innerHTML = '';
+  const colors = ['#c4a35a', '#e2c887', '#9a7b3c', '#eceae4', '#c4a35a'];
+  for (let i = 0; i < 48; i += 1) {
+    const piece = document.createElement('span');
+    piece.className = 'confetti-piece';
+    piece.style.left = `${Math.random() * 100}%`;
+    piece.style.background = colors[i % colors.length];
+    piece.style.animationDelay = `${Math.random() * 0.6}s`;
+    piece.style.animationDuration = `${2.2 + Math.random() * 1.5}s`;
+    container.appendChild(piece);
+  }
+}
+
+function showSuccessModal() {
+  spawnConfetti();
+  openModal('beta-success-modal');
+}
+
 function initBetaGate() {
-  const gateEl = document.getElementById('beta-gate');
+  const joinBtn = document.getElementById('join-beta-btn');
+  const joinModal = document.getElementById('join-modal');
   const signupPanel = document.getElementById('beta-signup-panel');
-  const modal = document.getElementById('beta-success-modal');
   const continueBtn = document.getElementById('beta-gate-continue');
   const errorEl = document.getElementById('beta-gate-error');
   const modalCloseBtn = document.getElementById('beta-modal-close');
-
-  if (!gateEl) return;
 
   const input1 = document.getElementById('beta-gate-1');
   const input2 = document.getElementById('beta-gate-2');
   const input3 = document.getElementById('beta-gate-3');
   const inputs = [input1, input2, input3];
 
-  if (sessionStorage.getItem(BETA_ACCESS_KEY) === 'true') {
-    showSignupPanel(gateEl, signupPanel);
-    return;
-  }
+  if (!joinBtn) return;
 
   const digits1 = typeof betaGateDigits1 !== 'undefined' ? betaGateDigits1 : [];
   const digits2 = typeof betaGateDigits2 !== 'undefined' ? betaGateDigits2 : [];
   const pairs = typeof betaGatePairs !== 'undefined' ? betaGatePairs : [];
+
+  if (sessionStorage.getItem(BETA_ACCESS_KEY) === 'true') {
+    showSignupPanel(signupPanel);
+    joinBtn.textContent = 'Sign Up for the Beta';
+    const scrollToSignup = () => {
+      showSignupPanel(signupPanel);
+      signupPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    };
+    joinBtn.addEventListener('click', scrollToSignup);
+    if (window.location.hash === '#join') {
+      scrollToSignup();
+    }
+    return;
+  }
 
   function clearError() {
     if (errorEl) errorEl.hidden = true;
@@ -137,9 +171,39 @@ function initBetaGate() {
   if (input2) handleDigitInput(input2, digits2, input3, input1, false);
   if (input3) handleDigitInput(input3, pairs, null, input2, true);
 
+  function openJoinModal() {
+    openModal('join-modal');
+    if (input1) {
+      input1.value = '';
+      input2.value = '';
+      input3.value = '';
+      clearError();
+      setTimeout(() => input1.focus(), 200);
+    }
+  }
+
+  joinBtn.addEventListener('click', openJoinModal);
+
+  if (window.location.hash === '#join') {
+    openJoinModal();
+  }
+
+  document.querySelectorAll('[data-close-modal]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      closeModal(btn.getAttribute('data-close-modal'));
+    });
+  });
+
   function grantAccess() {
     sessionStorage.setItem(BETA_ACCESS_KEY, 'true');
-    showSuccessModal(modal);
+    closeModal('join-modal');
+    showSuccessModal();
+    joinBtn.textContent = 'Sign Up for the Beta';
+    joinBtn.removeEventListener('click', openJoinModal);
+    joinBtn.addEventListener('click', () => {
+      showSignupPanel(signupPanel);
+      signupPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
   }
 
   function onContinue() {
@@ -167,26 +231,18 @@ function initBetaGate() {
     continueBtn.addEventListener('click', onContinue);
   }
 
-  function dismissModalAndRevealSignup() {
-    hideSuccessModal(modal);
-    showSignupPanel(gateEl, signupPanel);
+  function dismissCelebrationAndRevealSignup() {
+    closeModal('beta-success-modal');
+    showSignupPanel(signupPanel);
 
     if (typeof NOTION_FORM_URL !== 'undefined' && NOTION_FORM_URL && !NOTION_FORM_URL.startsWith('PASTE_')) {
       setTimeout(() => {
         window.open(NOTION_FORM_URL, '_blank', 'noopener,noreferrer');
-      }, 4000);
+      }, 800);
     }
   }
 
   if (modalCloseBtn) {
-    modalCloseBtn.addEventListener('click', dismissModalAndRevealSignup);
-  }
-
-  if (modal) {
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal.querySelector('.beta-modal-overlay')) {
-        dismissModalAndRevealSignup();
-      }
-    });
+    modalCloseBtn.addEventListener('click', dismissCelebrationAndRevealSignup);
   }
 }

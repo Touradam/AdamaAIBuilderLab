@@ -32,6 +32,12 @@ function renderCohortStart() {
   document.querySelectorAll('[data-cohort-start]').forEach((el) => {
     el.textContent = summary;
   });
+
+  if (cohortSchedule.weeklyScheduleSummary) {
+    document.querySelectorAll('[data-weekly-schedule]').forEach((el) => {
+      el.textContent = cohortSchedule.weeklyScheduleSummary;
+    });
+  }
 }
 
 function renderBetaLearnTopics() {
