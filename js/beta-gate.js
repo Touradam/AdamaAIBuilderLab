@@ -1,23 +1,15 @@
 const BETA_ACCESS_KEY = 'betaAccessGranted';
 
-function getExpectedGateValues() {
-  const d1 = typeof betaGateDigits1 !== 'undefined' ? betaGateDigits1 : [];
-  const d2 = typeof betaGateDigits2 !== 'undefined' ? betaGateDigits2 : [];
-  const pairs = typeof betaGatePairs !== 'undefined' ? betaGatePairs : [];
-  const i = 0;
-  const j = 1;
-  const k = 0;
-  return {
-    digit1: d1[i],
-    digit2: d2[j],
-    pair: pairs[k],
-  };
+function isValidGateEntry(digit, allowedList) {
+  if (digit === '' || digit === null || digit === undefined) return false;
+  const num = parseInt(digit, 10);
+  return allowedList.includes(num);
 }
 
-function isValidGateCombination(d1, d2, pairStr) {
-  const expected = getExpectedGateValues();
-  const pairNum = parseInt(pairStr, 10);
-  return d1 === expected.digit1 && d2 === expected.digit2 && pairNum === expected.pair;
+function isValidGatePair(pairStr, allowedPairs) {
+  if (pairStr.length !== 2) return false;
+  const num = parseInt(pairStr, 10);
+  return allowedPairs.includes(num);
 }
 
 function openModal(modalId) {
@@ -207,20 +199,15 @@ function initBetaGate() {
   }
 
   function onContinue() {
-    const d1 = input1 ? parseInt(input1.value, 10) : NaN;
-    const d2 = input2 ? parseInt(input2.value, 10) : NaN;
-    const pairStr = input3 ? input3.value : '';
+    const box1 = input1 ? input1.value : '';
+    const box2 = input2 ? input2.value : '';
+    const box3 = input3 ? input3.value : '';
 
-    if (!isValidSingleDigit(String(d1), digits1) || !isValidSingleDigit(String(d2), digits2)) {
-      showError();
-      return;
-    }
-    if (!isValidPairComplete(pairStr)) {
-      showError();
-      return;
-    }
+    const box1Ok = isValidGateEntry(box1, digits1);
+    const box2Ok = isValidGateEntry(box2, digits2);
+    const box3Ok = isValidGatePair(box3, pairs);
 
-    if (isValidGateCombination(d1, d2, pairStr)) {
+    if (box1Ok && box2Ok && box3Ok) {
       grantAccess();
     } else {
       showError();
